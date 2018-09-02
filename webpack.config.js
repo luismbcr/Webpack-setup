@@ -1,11 +1,16 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   entry: path.resolve(__dirname, 'index.js'),
   output : {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -20,6 +25,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin(),
     new ExtractTextPlugin("css/styles.css")
   ]
 }
