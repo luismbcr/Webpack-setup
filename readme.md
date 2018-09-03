@@ -7,3 +7,14 @@ Webpack setup ready for websites.
 yarn 
 ```
 
+##Run Dev server
+
+```
+yarn run dev
+```
+
+## build
+
+```
+yarn build
+```
