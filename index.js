@@ -1,2 +1,10 @@
 import './style.css';
-console.log('hello');
+
+const data = {
+  greeting: "hello",
+  sleep: "sleeping"
+}
+
+const {greeting: greet} = data;
+
+console.log(greet);
